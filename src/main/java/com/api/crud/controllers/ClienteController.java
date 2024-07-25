@@ -53,9 +53,9 @@ public class ClienteController {
 
     /* não esta funcionado no insonia */
     @DeleteMapping("/{id}")
-    public String deletarCliente(@PathVariable UUID Id) {
+    public String deletarCliente(@PathVariable UUID id) {
         for (cliente cliente : cliente.clientes) {
-            if (cliente.getId().equals(Id)) {
+            if (cliente.getId().equals(id)) {
                 cliente.clientes.remove(cliente);
                 return "Cliente deletado com sucesso. ";
             }
