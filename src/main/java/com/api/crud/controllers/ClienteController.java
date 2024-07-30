@@ -1,5 +1,6 @@
 package com.api.crud.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,7 +17,7 @@ import java.util.UUID;
 @RequestMapping("clientes")
 public class ClienteController {
 
-    @GetMapping
+   /** @GetMapping
     public String getall(){
         if (cliente.clientes.isEmpty()) {
             return "clintes não registrados";
@@ -49,11 +50,11 @@ public class ClienteController {
             }
         }
         return "Cliente não encontrado";
-    }
+     }
 
-    /* não esta funcionado no insonia */
-    @DeleteMapping("/{id}")
-    public String deletarCliente(@PathVariable UUID id) {
+     não esta funcionado no insonia
+      @DeleteMapping("/{id}")
+     public String deletarCliente(@PathVariable UUID id) {
         for (cliente cliente : cliente.clientes) {
             if (cliente.getId().equals(id)) {
                 cliente.clientes.remove(cliente);
@@ -62,6 +63,6 @@ public class ClienteController {
         }
         return "Cliente não encontrado.";
     }
-    
+    */
 
 }
